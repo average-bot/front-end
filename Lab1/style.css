@@ -8,8 +8,6 @@ header{
     border-width: 5px;
     border-style: solid;
 }
-
-
 .navigation_bar{ /*ul*/
     display: flex; /* only the direct children become flex items */
     flex-wrap: wrap;
@@ -31,12 +29,11 @@ header{
     border-width: 5px;
     border-style: solid;
 
-
+    padding-left: 2%;
     flex-shrink: 0;
     flex-grow: 0;
     flex-basis: 1;
 }
-
 header nav{
     order:2;
 }
@@ -48,7 +45,32 @@ header #logo{
 main{
     background-color: rgb(70, 70, 114);
     margin: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+    border-color: rgb(61, 122, 124);
+    border-width: 5px;
+    border-style: solid;
+
 }
+main #left{
+    flex-shrink: 1;
+    flex-grow: 0;
+    flex-basis: 0;
+
+    border-color: rgb(117, 77, 117);
+    border-width: 5px;
+    border-style: solid;
+
+}
+main #right{
+    border-color: rgb(182, 59, 166);
+    border-width: 5px;
+    border-style: solid;
+
+}
+
 footer{
     background-color: rgb(69, 129, 69);
     margin: 10px;
@@ -57,6 +79,9 @@ footer{
 @media  (min-width:600px) {
     .navigation_bar{
         flex-direction: row;
+    }
+    .navigation_bar li{
+        padding-left: 0%;
     }
     header nav{
         order:1;
@@ -68,6 +93,8 @@ footer{
     }
     header{
         flex-direction: row;
+        gap:10px;
+        justify-content: center;
     }
     header>nav{
         align-self: flex-start;
@@ -78,6 +105,9 @@ footer{
     .navigation_bar{
         flex-direction: row;
         order:1;
+    }
+    .navigation_bar li{
+        padding-left: 0%;
     }
     header nav{
         order:2;
@@ -92,7 +122,7 @@ footer{
     header>nav{
         align-self: flex-end;
     }
- 
+    
 
 }
 
