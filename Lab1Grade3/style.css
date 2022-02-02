@@ -1,20 +1,47 @@
 body{
     max-width:60%;
     margin: auto;
-        border: 10px;
+    /* border: 10px;
     border-color: blueviolet;
     border-style: dotted;
     animation-name: selfie_animation;
-    animation-duration: 4s;
+    animation-duration: 4s; */
+    background-image: url("pics/letter.jpg");
+    color: #3d4447;
+    font-family: American Typewriter;
+    padding-top: 2%;
+    padding-bottom: 2%;
 }
-#selfie{
-    width: 30%;
+header #greeting {
+    border: 5px;
+    border-color: rgb(14, 6, 22);
+    border-style:double;
+}
+header{
+    display: flex;
+    flex-direction: row;
+
+    border: 5px;
+    border-color: blueviolet;
+    border-style: dotted;
+}
+header #greeting{
+    flex-basis: 2;
+    padding: 2%;
     height: auto;
+}
+header #selfie{
+    flex-basis: 1;
+    object-fit: cover;
     border: 5px;
     border-color: blueviolet;
     border-style: dotted;
     animation-name: selfie_animation;
     animation-duration: 4s;
+}
+
+main{
+    padding: 3%;
 }
 
 @keyframes selfie_animation {
@@ -50,3 +77,38 @@ td,th{
     width: 33%;
     text-align: center;
 }
+
+
+
+
+/*Source: https://plantpot.works/2974   EDITED TO MY OWN LIKING*/
+#container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.striped-border {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  background-color: #E8DCB8;
+  
+}
+.striped-border::before {
+    background-image: url("pics/letter.jpg");
+    background-size: cover;
+  content: '';
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  bottom: -10px;
+  left: -10px;
+  z-index: -1;
+  background: repeating-linear-gradient(-45deg, #f00 0, #f00 20px, #E8DCB8 20px, #E8DCB8 40px, #00f 40px, #00f 60px, #E8DCB8 60px, #E8DCB8 80px);
+}
+/*Source: https://plantpot.works/2974   EDITED TO MY OWN LIKING*/
+
+
+/*Typewriter effect thanks*/
