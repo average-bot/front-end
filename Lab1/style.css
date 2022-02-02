@@ -1,3 +1,15 @@
+p, h2, h3{
+    color: white;
+    text-align: left;
+    font-family:Verdana;
+}
+h2, h3{
+    font-weight: bold;
+}
+img{
+    width: 100%;
+    height: auto;
+}
 /* Shift the logo to the right on the medium screen */
 header{
     display: flex;
@@ -36,17 +48,19 @@ header{
 }
 header nav{
     order:2;
+    flex-basis: 50%;
 }
 header #logo{
     order:1;
     max-height: 200px;
+    flex-basis: 25%;
 }
 
 main{
     background-color: rgb(70, 70, 114);
     margin: 10px;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: center;
 
     border-color: rgb(61, 122, 124);
@@ -57,7 +71,9 @@ main{
 main #left{
     flex-shrink: 1;
     flex-grow: 0;
-    flex-basis: 0;
+    flex-basis: 50%;
+    order: 1;
+    flex-wrap: wrap;
 
     border-color: rgb(117, 77, 117);
     border-width: 5px;
@@ -65,10 +81,13 @@ main #left{
 
 }
 main #right{
+    flex-basis: 25%;
+    order:2;
+    flex-wrap: wrap;
+
     border-color: rgb(182, 59, 166);
     border-width: 5px;
     border-style: solid;
-
 }
 
 footer{
@@ -99,9 +118,11 @@ footer{
     header>nav{
         align-self: flex-start;
     }
-  
+    main{
+        flex-direction: row;
+    }
 }
-@media  (min-width:900px) {
+@media  (min-width:768px) {
     .navigation_bar{
         flex-direction: row;
         order:1;

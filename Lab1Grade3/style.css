@@ -1,0 +1,52 @@
+body{
+    max-width:60%;
+    margin: auto;
+        border: 10px;
+    border-color: blueviolet;
+    border-style: dotted;
+    animation-name: selfie_animation;
+    animation-duration: 4s;
+}
+#selfie{
+    width: 30%;
+    height: auto;
+    border: 5px;
+    border-color: blueviolet;
+    border-style: dotted;
+    animation-name: selfie_animation;
+    animation-duration: 4s;
+}
+
+@keyframes selfie_animation {
+    0%   {border-color: red;}
+    10%  {border-color: yellow;}
+    20% {border-color: green;}
+    30%  {border-color: blue;}
+    40%   {border-color: red;}
+    50%  {border-color: yellow;}
+    60% {border-color: green;}
+    70%  {border-color: blue;}
+    80%   {border-color: red;}
+    90%  {border-color: yellow;}
+    100% {border-color: green;}
+}
+table{
+    border-style: groove;
+    border-color: chocolate;
+    width: 100%;
+}
+.dogs{
+    max-width: 30%;
+    max-height: auto;
+}
+video{
+    width: 320px;
+    height: 240px;
+}
+table, th, td {
+  border: 1px solid black;
+}
+td,th{
+    width: 33%;
+    text-align: center;
+}
