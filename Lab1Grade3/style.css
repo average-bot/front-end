@@ -7,55 +7,84 @@ body{
     animation-name: selfie_animation;
     animation-duration: 4s; */
     background-image: url("pics/letter.jpg");
+    background-attachment: fixed;
     color: #3d4447;
-    font-family: American Typewriter;
+    font-family:Apple Chancery, cursive;
     padding-top: 2%;
     padding-bottom: 2%;
 }
-header #greeting {
-    border: 5px;
-    border-color: rgb(14, 6, 22);
-    border-style:double;
+main{
+    padding: 3%;
 }
 header{
     display: flex;
     flex-direction: row;
+    width:95%;
+    height: 500px;
+    padding: 3%;
+    margin: 5%;
+    margin-top: 2%;
+    border-style: double;
+}
+header #greeting {
+    max-width: 750px;
+    padding: 3%;
+    padding-right: 10%;
+    display: flex;
+    flex-direction: column;
+    gap:3%;
+}
+
+#greeting #from{
+    margin-top: 5%;
+    align-self: flex-end;
+    font-family: Apple Chancery, cursive;
+}
+
+header #info #selfie{
+    width: 100%;
+    max-width: 300px;
+    height: auto;    
+    margin-bottom: 10%;
 
     border: 5px;
-    border-color: blueviolet;
-    border-style: dotted;
-}
-header #greeting{
-    flex-basis: 2;
-    padding: 2%;
-    height: auto;
-}
-header #selfie{
-    flex-basis: 1;
-    object-fit: cover;
-    border: 5px;
-    border-color: blueviolet;
+    border-color: #3d4447;
     border-style: dotted;
     animation-name: selfie_animation;
-    animation-duration: 4s;
+    animation-duration: 8s;
 }
 
-main{
-    padding: 3%;
+header #info p, #from{
+    font-size: 1em;
+    width:200px;
+    border-bottom:1px solid #000;
 }
+header #info{
+    padding-left: 7%;
+    border-left: 1px solid;
+    border-left-color: black;
+}
+
+audio{
+    filter:  contrast(92%) invert(5%);
+    background-color: rgb(17,157,174);
+    width: 200px;
+    height: 25px;
+}
+
 
 @keyframes selfie_animation {
-    0%   {border-color: red;}
-    10%  {border-color: yellow;}
-    20% {border-color: green;}
-    30%  {border-color: blue;}
-    40%   {border-color: red;}
-    50%  {border-color: yellow;}
-    60% {border-color: green;}
-    70%  {border-color: blue;}
-    80%   {border-color: red;}
-    90%  {border-color: yellow;}
-    100% {border-color: green;}
+    0%   {border-color: rgb(17,157,174);}
+    10%  {border-color: rgb(219,36,38);}
+    20% {border-color: rgb(17,157,174);}
+    30%  {border-color: rgb(219,36,38);}
+    40%   {border-color: rgb(17,157,174);}
+    50%  {border-color: rgb(219,36,38);}
+    60% {border-color: rgb(17,157,174);}
+    70%  {border-color: rgb(219,36,38);}
+    80%   {border-color: rgb(17,157,174);}
+    90%  {border-color: rgb(219,36,38);}
+    100% {border-color: rgb(17,157,174);}
 }
 table{
     border-style: groove;
@@ -65,6 +94,7 @@ table{
 .dogs{
     max-width: 30%;
     max-height: auto;
+    box-shadow: 1px 2px 3px rgba(0,0,0,.5);
 }
 video{
     width: 320px;
@@ -106,7 +136,7 @@ td,th{
   bottom: -10px;
   left: -10px;
   z-index: -1;
-  background: repeating-linear-gradient(-45deg, #f00 0, #f00 20px, #E8DCB8 20px, #E8DCB8 40px, #00f 40px, #00f 60px, #E8DCB8 60px, #E8DCB8 80px);
+  background: repeating-linear-gradient(-45deg, rgb(219,36,38) 0, rgb(219,36,38) 20px, #E8DCB8 20px, #E8DCB8 40px, rgb(17,157,174) 40px, rgb(17,157,174) 60px, #E8DCB8 60px, #E8DCB8 80px);
 }
 /*Source: https://plantpot.works/2974   EDITED TO MY OWN LIKING*/
 
