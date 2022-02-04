@@ -1,11 +1,7 @@
 body{
     max-width:60%;
     margin: auto;
-    /* border: 10px;
-    border-color: blueviolet;
-    border-style: dotted;
-    animation-name: selfie_animation;
-    animation-duration: 4s; */
+
     background-image: url("pics/letter.jpg");
     background-attachment: fixed;
     color: #3d4447;
@@ -38,7 +34,6 @@ header #greeting {
 #greeting #from{
     margin-top: 5%;
     align-self: flex-end;
-    font-family: Apple Chancery, cursive;
 }
 
 header #info #selfie{
@@ -48,7 +43,7 @@ header #info #selfie{
     margin-bottom: 10%;
 
     border: 5px;
-    border-color: #3d4447;
+    border-color: rgb(111, 173, 180);
     border-style: dotted;
     animation-name: selfie_animation;
     animation-duration: 8s;
@@ -67,7 +62,6 @@ header #info{
 
 audio{
     filter:  contrast(92%) invert(5%);
-    background-color: rgb(17,157,174);
     width: 200px;
     height: 25px;
 }
@@ -87,8 +81,7 @@ audio{
     100% {border-color: rgb(17,157,174);}
 }
 table{
-    border-style: groove;
-    border-color: chocolate;
+    background-color: rgb(132, 185, 190);
     width: 100%;
 }
 .dogs{
@@ -108,7 +101,9 @@ td,th{
     text-align: center;
 }
 
-
+footer{
+    margin:5%;
+}
 
 
 /*Source: https://plantpot.works/2974   EDITED TO MY OWN LIKING*/
@@ -139,6 +134,3 @@ td,th{
   background: repeating-linear-gradient(-45deg, rgb(219,36,38) 0, rgb(219,36,38) 20px, #E8DCB8 20px, #E8DCB8 40px, rgb(17,157,174) 40px, rgb(17,157,174) 60px, #E8DCB8 60px, #E8DCB8 80px);
 }
 /*Source: https://plantpot.works/2974   EDITED TO MY OWN LIKING*/
-
-
-/*Typewriter effect thanks*/
