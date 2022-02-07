@@ -5,8 +5,11 @@ body{
     display: flex;
     flex-direction: column;
 }
+div{
+    border-style:double;
+    border-width: 2px;
+}
 main p{
-    text-align: left;
     padding: 2%;
 }
 #flex_container{
@@ -21,49 +24,55 @@ main p{
 #flex_container #left{
     flex: 1 1 100px;
     background-color: rgb(190, 212, 205);
+    text-align: left;
 }
 #flex_container #middle{
-    flex: 2 2 200px;
+    flex: 3 3 300px;
     background-color: azure;
 }
 #flex_container #right{
     flex: 1 1 100px;
     background-color: rgb(190, 212, 205);
 }
-div{
-    border-style:double;
-    border-width: 2px;
-}
+
+/*Header box*/
 header{
     position: sticky;
     position: -webkit-sticky;
     top:0;
     background-color: rgb(159, 202, 187);
 }
-footer{
-    height: 100px;
-    background-color: rgb(159, 202, 187);
+nav *{
+    padding: 6px;
 }
-nav ul{
-    text-align: left;
-    width: 50%;
-    display: flex;
-    list-style: none;
+.navigation_bar{
+    float:left;
 }
-nav ul li{
-    flex: 1 1 auto;
+.navigation_bar *{
+    display: inline;
 }
+nav .logout{
+    float: right;
+}
+/*Middle box*/
+#ThreeD_model{
+    visibility: hidden;
+    border: 0;
+}
+#ThreeD_model iframe{
+    width: 100%;
+    height: 745px;
+}
+/*Left box*/
 .dropdown {
   position: relative;
   display: block;
 }
-.dropdown-content li{
+.dropdown_content li{
     display: block;
-    border-style: double;
-    border-width: 1px;
 }
 
-.dropdown-content {
+.dropdown_content {
   display: none;
   position: absolute;
   background-color: #f9f9f9;
@@ -72,6 +81,15 @@ nav ul li{
   z-index: 1;
 }
 
-.dropdown:hover .dropdown-content {
+.dropdown:hover .dropdown_content {
   display: block;
+}
+
+/*Footer box*/
+footer{
+    height: 100px;
+    background-color: rgb(159, 202, 187);
+}
+#signatures{
+    max-height: 100px;
 }
