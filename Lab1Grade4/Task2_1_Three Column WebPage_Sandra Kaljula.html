@@ -14,16 +14,32 @@
 <body>
 
     <header>
-        <h2>Header with a logo and a Navigation Bar</h2>
+        <h2>Header/Navigation Bar with Dropdown Menu</h2>
         <nav>
+            <ul class="navigation_bar">
+                <li><a href="#home" class="current">Home</a></li>
+                <li><a href="#Navigation">Description</a></li>
+                <li><a href="#Navigation">Possibilities</a></li>
+                <li><a href="#Navigation">The YuMi interface</a></li>
+                <li><a href="#Navigation">Installation</a></li>
+                <li class="dropdown"><a href="#Navigation">Hardware specs</a>
+                    <ul class="dropdown-content">
+                        <li><a href="#Navigation">Torso</a></li>
+                        <li><a href="#Navigation">Arms</a></li>
+                        <li><a href="#Navigation">Hands</a></li>
+                    </ul>
+                </li>
+                <li><a href="#Navigation">Contact</a></li>
+            </ul>
         </nav>
+        <!--Navigation has a dropdown menu for hardware specs since they can be categorized.-->
     </header>
 
     <main>
         <div id="flex_container">
             <div id="left" class="flex">
-                <h2>Drop Down Menu</h2>
-                <p></p>
+                <h2>Side bar</h2>
+                <p>History of YuMi like robots.</p>
             </div>
             <div id="middle" class="flex">
                 <h2>Main Content Window</h2>
@@ -35,12 +51,14 @@
             </div>
             <div id="right" class="flex">
                 <h2>Side Bar</h2>
+                <p>Current usage of YuMi, inspiration for the customer.</p>
             </div>
         </div>
     </main>
 
     <footer>
         <h2>Footer</h2>
+        <p>Information with where to buy the product.</p>
     </footer>
 </body>
 
