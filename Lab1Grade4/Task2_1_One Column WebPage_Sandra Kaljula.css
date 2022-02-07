@@ -5,11 +5,16 @@ body{
     display: flex;
     flex-direction: column;
 }
+main{
+    background-color: rgb(190, 212, 205);
+    min-height: 800px;
+    border-style: solid;
+    border-width: 3px;
+}
 main p{
     text-align: left;
     padding: 2%;
 }
-
 div{
     border-style:double;
     border-width: 2px;
@@ -32,4 +37,26 @@ nav ul{
 }
 nav ul li{
     flex: 1 1 auto;
+}
+.dropdown {
+  position: relative;
+  display: block;
+}
+.dropdown-content li{
+    display: block;
+    border-style: double;
+    border-width: 1px;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  padding: 2px;
+  z-index: 1;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
 }
