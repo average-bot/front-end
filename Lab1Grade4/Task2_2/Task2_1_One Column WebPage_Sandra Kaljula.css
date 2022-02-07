@@ -1,0 +1,62 @@
+body{
+    width: 100%;
+    margin:auto;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+main{
+    background-color: rgb(190, 212, 205);
+    min-height: 800px;
+    border-style: solid;
+    border-width: 3px;
+}
+main p{
+    text-align: left;
+    padding: 2%;
+}
+div{
+    border-style:double;
+    border-width: 2px;
+}
+header{
+    position: sticky;
+    position: -webkit-sticky;
+    top:0;
+    background-color: rgb(159, 202, 187);
+}
+footer{
+    height: 100px;
+    background-color: rgb(159, 202, 187);
+}
+nav ul{
+    text-align: left;
+    width: 50%;
+    display: flex;
+    list-style: none;
+}
+nav ul li{
+    flex: 1 1 auto;
+}
+.dropdown {
+  position: relative;
+  display: block;
+}
+.dropdown-content li{
+    display: block;
+    border-style: double;
+    border-width: 1px;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  padding: 2px;
+  z-index: 1;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
