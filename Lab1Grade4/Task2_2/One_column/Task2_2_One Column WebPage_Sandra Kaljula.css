@@ -5,37 +5,24 @@ body{
     display: flex;
     flex-direction: column;
 }
+main{
+    background-color: rgb(190, 212, 205);
+    background-image: url('paper.jpg');
+    background-size: cover;
+    min-height: 800px;
+    border-style: solid;
+    border-width: 3px;
+}
+a{
+    color: black;
+}
+main p{
+    text-align: left;
+    padding: 2%;
+}
 div{
     border-style:double;
     border-width: 2px;
-}
-h2{
-    margin-top: 13px;
-}
-main p{
-    padding: 2%;
-}
-#flex_container{
-    display: flex;
-    flex-direction: row;
-    width: 100%;
-    height: 800px;
-}
-#flex_container .flex{
-    background-color: rgb(200, 214, 209);
-}
-#flex_container #left{
-    flex: 1 1 100px;
-    background-color: rgb(190, 212, 205);
-    text-align: left;
-}
-#flex_container #middle{
-    flex: 3 3 300px;
-    background-color: azure;
-}
-#flex_container #right{
-    flex: 1 1 100px;
-    background-color: rgb(190, 212, 205);
 }
 
 /*Header box*/
@@ -43,44 +30,81 @@ header{
     position: sticky;
     position: -webkit-sticky;
     top:0;
+    padding: 10px;
+    padding-bottom: 0;
     background-color: rgb(159, 202, 187);
+    z-index: 1;
 }
 nav *{
     padding: 6px;
 }
 .navigation_bar{
     float:left;
+   
 }
 .navigation_bar *{
     display: inline;
 }
+.navigation_bar li{
+    border: 2px solid black;
+}
 nav .logout{
     float: right;
+    border: 2px solid black;
 }
-/*Middle box*/
+
+
+
+/*3D box*/
 #ThreeD_model{
+    margin: 5px;
     visibility: hidden;
     border: 0;
+    overflow: hidden;
+    height: 0;
 }
 #ThreeD_model iframe{
     width: 100%;
-    height: 745px;
+    height: 500px;
 }
-/*Left box*/
+
+/*History box*/
+
+#middle h2{
+    text-align: center;
+}
+#middle ul{
+    padding-left: 5px;
+    width: 40%;
+    margin: auto;
+}
+
+#middle #history{
+    width: 40%;
+    height: auto;
+    margin-bottom: 40px;
+    border: 2px dashed black;
+}
+
 .dropdown {
   position: relative;
   display: block;
+  margin: 5px;
+  border: 2px solid black;
+  text-align: center;
 }
 .dropdown_content li{
     display: block;
+
 }
 
 .dropdown_content {
   display: none;
   position: absolute;
-  background-color: #f9f9f9;
+  background-color: azure;
   min-width: 160px;
   padding: 2px;
+  border: 2px solid black;
   z-index: 1;
 }
 
@@ -89,34 +113,37 @@ nav .logout{
 }
 
 
-/*Right box*/
-
+/*Bottom box*/
 
 /*source: https://dev.to/cscarpitta/build-a-simple-pie-chart-with-html-and-css-32dn*/
 #my-pie-chart {
-    margin-right: 7px;
-    height: 200px;
-    width: 200px;
+    height: 400px;
+    width: 400px;
+    margin-right: 15px;
     border-radius: 70%;
     background: conic-gradient(rgb(216, 228, 224) 0.00%, rgb(179, 209, 199) 1%, rgb(111, 165, 148) 1% 2%, rgb(79, 116, 110) 2% 9%, rgb(33, 77, 74) 9% 40%, rgb(7, 43, 40) 40%);
 }
 #stats{
+    margin: auto;
+    width: 50%;
     display: flex;
     flex-direction: row;
     border: 0;
     padding: 15px;
+    margin-bottom: 20px;
 }
 #stats *{
     padding: 7px;
+    margin: auto;
 }
 #legend *{
     text-align: middle;
     border: 2px double black;
 }
 #sold{
-    
     margin: auto;
-    width: 50%;
+    width: 40%;
+    margin-bottom: 30px;
 }
 #sold *{
     padding: 5px;
@@ -127,16 +154,16 @@ nav .logout{
     text-align: right;
 }
 
+
+
+
 /*Footer box*/
 footer{
     height: 100px;
     background-color: rgb(159, 202, 187);
 }
 #signatures{
-    background-image: url('signatures1.png');
-    width: 200px;
-    height: 200px;
-    /* you need to match the shadow color to your background or image border for the desired effect*/
-    box-shadow: 0 0 8px 8px rgb(159, 202, 187) inset;
+    margin-top: 5px;
+    width: 150px;
     border: 0;
 }
