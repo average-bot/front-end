@@ -9,6 +9,9 @@ div{
     border-style:double;
     border-width: 2px;
 }
+h2{
+    margin-top: 13px;
+}
 main p{
     padding: 2%;
 }
@@ -85,11 +88,55 @@ nav .logout{
   display: block;
 }
 
+
+/*Right box*/
+
+
+/*source: https://dev.to/cscarpitta/build-a-simple-pie-chart-with-html-and-css-32dn*/
+#my-pie-chart {
+    margin-right: 7px;
+    height: 200px;
+    width: 200px;
+    border-radius: 70%;
+    background: conic-gradient(rgb(216, 228, 224) 0.00%, rgb(179, 209, 199) 1%, rgb(111, 165, 148) 1% 2%, rgb(79, 116, 110) 2% 9%, rgb(33, 77, 74) 9% 40%, rgb(7, 43, 40) 40%);
+}
+#stats{
+    display: flex;
+    flex-direction: row;
+    border: 0;
+    padding: 15px;
+}
+#stats *{
+    padding: 7px;
+}
+#legend *{
+    text-align: middle;
+    border: 2px double black;
+}
+#sold{
+    
+    margin: auto;
+    width: 50%;
+}
+#sold *{
+    padding: 5px;
+    text-align: left;
+    border: 2px double black;
+}
+#sold tr td:nth-child(2){
+    text-align: right;
+}
+
 /*Footer box*/
 footer{
     height: 100px;
     background-color: rgb(159, 202, 187);
 }
 #signatures{
-    max-height: 100px;
+    background-image: url('signatures1.png');
+    width: 200px;
+    height: 200px;
+    /* you need to match the shadow color to your background or image border for the desired effect*/
+    box-shadow: 0 0 8px 8px rgb(159, 202, 187) inset;
+    border: 0;
 }
