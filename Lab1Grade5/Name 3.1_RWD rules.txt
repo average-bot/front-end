@@ -1,0 +1,13 @@
+I had the three columns divided into div boxes with ids (left, middle, right) inside my main tags.
+I used a blend of grid and flex layout.
+For the mobile screen width I stacked the boxes under eachother, making the originally three column website a one column.
+I decided to hide the middle section while there was no 3D product showing so it would not have an empty box as the top box.
+Inside the grids I used flex boxes which made it easy to stack smaller boxes to each other.
+Most used rules: flex-direction, shrink, grow, grid-column, grid-row
+
+
+
+@media only screen and (max-width: Ypx) {} where Y is the max width
+Mobile screen max width 480 px, 
+Tablet screen max width 768 px, 
+Computer screen everything above 768px

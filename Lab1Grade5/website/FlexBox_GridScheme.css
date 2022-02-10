@@ -268,7 +268,7 @@ footer{
 
     #flex_container{
         display: grid;
-        flex-direction: column;
+       
     }
     #flex_container #left{
         grid-column: 1;
