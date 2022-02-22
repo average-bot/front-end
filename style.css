@@ -1,0 +1,14 @@
+body{
+
+    background-image: url("library.jpg");
+}
+main{
+    padding: 10%;
+    background-color: white;
+    max-width:max-content;
+    max-width: 50%;
+    margin: auto;
+}
+h1{
+    margin-bottom: 6%;
+}
