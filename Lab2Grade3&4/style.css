@@ -161,3 +161,6 @@ footer #signature{
         font:italic small-caps bold 16px/2 cursive;
     }
 
+    .answers{
+        color:green;
+    }
