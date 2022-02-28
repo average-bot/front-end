@@ -1,0 +1,11 @@
+{
+    "data": [
+        {
+            "gender": "woman",
+            "birthYear": 2000,
+            "java": "checked",
+            "python": "checked",
+            "rust": ""
+        }
+    ]
+}
