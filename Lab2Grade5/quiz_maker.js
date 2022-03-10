@@ -1,9 +1,10 @@
-var type = "hidden";
+var Qtype = "hidden";
 function add_option() {
+    if (document.getElementById("types").selectedIndex == 0) return; // if "choose" is selected
     var options = document.getElementById("options");
 
     var option = document.createElement("input");
-    option.type = "checkbox";
+    option.type = Qtype;
     option.className = "optionBox";
 
     var input = document.createElement("input");
@@ -15,32 +16,30 @@ function add_option() {
     options.appendChild(document.createElement("br"));
 }
 
+// dropdown select option menu
 var types = document.getElementById("types");
 types = addEventListener("change", (event) => {
     const options = document.getElementById("options").getElementsByClassName("optionBox");
-    switch (event.target.value) { //according to the type of the question do
+    switch (event.target.value) { // according to the type of the question do
         case "text": //textbox
-            for (i = 0; i < options.length; i++) {
-                options[i].type = "hidden";
-            }
+            Qtype = "hidden";
             break;
         case "radio": //radio
-            for (i = 0; i < options.length; i++) {
-                options[i].type = "radio";
-            }
+            Qtype = "radio";
             break;
         case "checkbox": //checkbox
-            for (i = 0; i < options.length; i++) {
-                options[i].type = "checkbox";
-            }
+            Qtype = "checkbox";
             break;
-
         default:
             break;
+    }
+    for (i = 0; i < options.length; i++) {
+        options[i].type = Qtype;
     }
 });
 
 function create_question() {
+    if (document.getElementById("question").value == "") return;
     const stack = {
         question: document.getElementById("question").value,
         type: document.getElementById("types").selectedIndex,
@@ -52,36 +51,52 @@ function create_question() {
         stack.options.push(options[i].value);
     }
 
-
-
     //write on the right side
     var rightBox = document.querySelector("#right");
 
     //add the question
     var stackQuestion = document.createElement("p");
-    stackQuestion.innerHTML = stack.question;
+    stackQuestion.innerHTML = "Q: " + stack.question;
     rightBox.appendChild(stackQuestion);
 
-
-
-
-
-
-    // add the checkboxes
-    for (var i = 0; i < stack.options.length; i++) {
-        var option = document.createElement("input"); // type!!
-        option.type = "checkbox";
-        var label = document.createElement("label");
-        label.innerHTML = stack.options[i];
+    // add the textbox (answer field)
+    if (Qtype === "hidden") {
+        var option = document.createElement("input");
+        option.type = "text";
         rightBox.appendChild(option);
-        rightBox.appendChild(label);
         rightBox.appendChild(document.createElement("br"));
+    } else {    // add the checkboxes or radio buttons
+        for (var i = 0; i < stack.options.length; i++) {
+            var option = document.createElement("input");
+            option.type = Qtype;
+            var label = document.createElement("label");
+            label.innerHTML = stack.options[i];
+            rightBox.appendChild(option);
+            rightBox.appendChild(label);
+            rightBox.appendChild(document.createElement("br"));
+        }
     }
-
-
-
-
-
+    resetForm();
 }
-//add_option();
+
+
+
+function newQuiz() {
+    resetForm();
+    const options = document.getElementById("right");
+    while (options.firstChild) {
+        options.firstChild.remove()
+    }
+}
+
+// Reset the create quiz question form
+function resetForm() {
+    Qtype = "hidden";
+    document.getElementById("question").value = "";
+    document.getElementById("types").selectedIndex = 0;
+    const options = document.getElementById("options")
+    while (options.firstChild) {
+        options.firstChild.remove()
+    }
+}
 
