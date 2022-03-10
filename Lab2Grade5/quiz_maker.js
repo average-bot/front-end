@@ -1,3 +1,4 @@
+var type = "hidden";
 function add_option() {
     var options = document.getElementById("options");
 
