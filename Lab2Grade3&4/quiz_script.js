@@ -55,28 +55,44 @@ function validate() {
 
 function getScore() {
     let points = 0;
+    let falseAnswers = false;
     if (document.getElementsByClassName("radio")[0].checked) {
         points++;
+    }
+    else {
+        document.getElementById("genderLabel").innerHTML += "WOMAN";
     }
     if (document.getElementById("year").value == 2000) {
         points++;
     }
+    else {
+        document.getElementById("yearLabel").innerHTML += 2000;
+    }
     if (document.getElementById("language1").checked) {
         points++;
+    }
+    else {
+        falseAnswers = true;
     }
     if (document.getElementById("language2").checked) {
         points++;
     }
+    else {
+        falseAnswers = true;
+    }
     if (document.getElementById("language3").checked) {
         points--;
+        falseAnswers = true;
     }
     document.getElementById("score").textContent = "You scored: " + points;
 
+    if (falseAnswers) {
+        document.getElementById("languageLabel").innerHTML += "JAVA AND PYTHON";
+    }
 
-    document.getElementById("genderLabel").innerHTML += "WOMAN";
-    document.getElementById("yearLabel").innerHTML += 2000;
-    document.getElementById("languageLabel").innerHTML += "JAVA AND PYTHON";
-    document.getElementById("correctLabel").innerHTML += "THE CORRECT ANSWERS WILL BE SHOWN NOW IN GREEN!";
+
+
+    document.getElementById("correctLabel").innerHTML += "THE CORRECT ANSWERS TO INCORRECT ANSWERS WILL BE SHOWN IN RED!";
 
     //var myData = JSON.parse(data[0]);
     //alert(myData.gender);
