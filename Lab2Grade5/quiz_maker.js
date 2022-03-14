@@ -2,6 +2,7 @@ var Qtype = "hidden";
 function add_option() {
     if (document.getElementById("types").selectedIndex == 0) return; // if "choose" is selected
     var options = document.getElementById("options");
+    if (options.childElementCount >= 3 && Qtype == "hidden") return; // if it is a text box only one possible answer is allowed
 
     var option = document.createElement("input");
     option.type = Qtype;
@@ -23,6 +24,13 @@ types = addEventListener("change", (event) => {
     switch (event.target.value) { // according to the type of the question do
         case "text": //textbox
             Qtype = "hidden";
+            const optionsBox = document.getElementById("options");
+            if (optionsBox.childElementCount >= 3) { // incase of more than one text box remove them all and add new empty box
+                while (optionsBox.firstChild) {
+                    optionsBox.firstChild.remove();
+                }
+            }
+            add_option();
             break;
         case "radio": //radio
             Qtype = "radio";
@@ -52,7 +60,7 @@ function create_question() {
     }
 
     //write on the right side
-    var rightBox = document.querySelector("#right");
+    var rightBox = document.querySelector("#doQuiz");
 
     //add the question
     var stackQuestion = document.createElement("p");
@@ -83,10 +91,11 @@ function create_question() {
 
 function newQuiz() {
     resetForm();
-    const options = document.getElementById("right");
+    const options = document.getElementById("doQuiz");
     while (options.firstChild) {
         options.firstChild.remove()
     }
+    alert("Quiz sent/reset");
 }
 
 // Reset the create quiz question form
@@ -94,9 +103,9 @@ function resetForm() {
     Qtype = "hidden";
     document.getElementById("question").value = "";
     document.getElementById("types").selectedIndex = 0;
-    const options = document.getElementById("options")
+    const options = document.getElementById("options");
     while (options.firstChild) {
-        options.firstChild.remove()
+        options.firstChild.remove();
     }
 }
 

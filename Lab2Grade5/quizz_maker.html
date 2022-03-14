@@ -29,7 +29,10 @@
 
     <main>
         <div id="left">
-            <h2>Welcome to the custom quizz maker</h2>
+            <h2>Welcome to the custom quizz maker!</h2>
+            <p>Here you can create the quiz questions in the left box and do the quiz as soon as you would like on the
+                right side box
+                =)</p>
             <div id="quizz_maker">
                 <label for="question">Write your question here: </label><br>
                 <input type="text" name="question" value="" id="question"><br>
@@ -60,8 +63,12 @@
         </div>
 
         <div id="right">
+            <p>Please click the "submit" button below when you are done creating and answering the quizz questions</p>
+            <div id="doQuiz"></div>
 
+            <button onclick=newQuiz()>Answer</button>
         </div>
+
     </main>
 
 
